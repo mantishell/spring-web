@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import spittr.data.SpittleRepository;
 
-import java.util.Map;
-
 @Controller
 @RequestMapping("/spittles")
 public class SpittleController {
