@@ -42,13 +42,13 @@ public class SpitterController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String proecssRegistration(@RequestPart("profilePicture") byte[]  profilePicture, @Valid Spitter spitter, Errors errors) throws IOException {
+    public String proecssRegistration(@RequestPart("profilePicture") MultipartFile  profilePicture, @Valid Spitter spitter, Errors errors) throws IOException {
         if(errors.hasErrors()){
             return "registerForm";
         }
-        spitterRepository.save(spitter);
+        //spitterRepository.save(spitter);
 
-        //profilePicture.transferTo(new File("/data/spittr/" + profilePicture.getOriginalFilename()));
+        profilePicture.transferTo(new File("data/spittr/" + profilePicture.getOriginalFilename()));
 
         return "redirect:/spitter/" + spitter.getUsername();
     }
