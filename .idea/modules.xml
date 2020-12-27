@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring_web_params/spring_web_params.iml" filepath="$PROJECT_DIR$/spring_web_params/spring_web_params.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_web_start/spring_web_start.iml" filepath="$PROJECT_DIR$/spring_web_start/spring_web_start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_web_views/spring_web_views.iml" filepath="$PROJECT_DIR$/spring_web_views/spring_web_views.iml" />
     </modules>
   </component>
 </project>
