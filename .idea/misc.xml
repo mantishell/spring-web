@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/spring_web_start/pom.xml" />
         <option value="$PROJECT_DIR$/spring_web_params/pom.xml" />
         <option value="$PROJECT_DIR$/spring_web_views/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_web_multipart/pom.xml" />
       </list>
     </option>
   </component>

@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_web_params" />
+        <module name="spring_web_multipart" />
         <module name="spring_web_start" />
         <module name="spring_web_views" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="spring_web_multipart" target="1.5" />
       <module name="spring_web_params" target="1.5" />
       <module name="spring_web_start" target="1.8" />
       <module name="spring_web_views" target="1.5" />
