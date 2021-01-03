@@ -26,6 +26,6 @@ public class SpitterWebInitializer extends AbstractAnnotationConfigDispatcherSer
      */
     protected void customizeRegistration(ServletRegistration.Dynamic registration) {
         registration.setMultipartConfig(
-                new MultipartConfigElement("tmp/spittr/uploads", 2097152, 4194304, 0));
+                new MultipartConfigElement("/home/mantishell/IdeaProjects/spring-web/spring_web_multipart/tmp/spittr/uploads", 2097152, 4194304, 0));
     }
 }
