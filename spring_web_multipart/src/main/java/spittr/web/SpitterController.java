@@ -12,6 +12,9 @@ import org.springframework.web.multipart.MultipartFile;
 import spittr.Spitter;
 import spittr.data.SpitterRepository;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.Part;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
@@ -42,13 +45,15 @@ public class SpitterController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String proecssRegistration(@RequestPart("profilePicture") MultipartFile  profilePicture, @Valid Spitter spitter, Errors errors) throws IOException {
+    public String proecssRegistration(@RequestPart("profilePicture") Part profilePicture, @Valid Spitter spitter, Errors errors, HttpServletRequest request) throws IOException {
         if(errors.hasErrors()){
             return "registerForm";
         }
         //spitterRepository.save(spitter);
 
-        profilePicture.transferTo(new File("data/spittr/" + profilePicture.getOriginalFilename()));
+        //profilePicture.transferTo(new File("data/spittr/" + profilePicture.getOriginalFilename()));
+        profilePicture.write("data/spittr/"+ profilePicture.getSubmittedFileName());
+        //ServletContext servletContext = request.getSession().getServletContext();
 
         return "redirect:/spitter/" + spitter.getUsername();
     }
